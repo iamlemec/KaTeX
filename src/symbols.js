@@ -946,6 +946,36 @@ var symbols = {
             font: "main",
             group: "accent",
             replace: "\u02d9"
+        },
+        "\\ell": {
+            font: "main",
+            group: "mathord",
+            replace: "\u2113"
+        },
+        "\\gt": {
+            font: "main",
+            group: "rel",
+            replace: "\u003e"
+        },
+        "\\lt": {
+            font: "main",
+            group: "rel",
+            replace: "\u003c"
+        },
+        "\\sim": {
+            font: "main",
+            group: "rel",
+            replace: "\u223c"
+        },
+        "\\equiv": {
+            font: "main",
+            group: "rel",
+            replace: "\u2261"
+        },
+        "\\align": {
+            font: "main",
+            group: "align",
+            replace: ""
         }
     },
     "text": {
