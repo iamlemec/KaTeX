@@ -164,13 +164,26 @@ var groupTypes = {
         return makeSpan(["mord","align"]);
     },
     mathord: function(group, options, prev) {
-        return buildCommon.mathit(
-            group.value, group.mode, options.getColor(), ["mord"]);
+        if (options.font === "mathrm") {
+            return buildCommon.mathrm(
+                group.value, group.mode, options.getColor(), ["mord"]);
+        } else if (options.font === "mathbb") {
+            return buildCommon.mathbb(
+                group.value, group.mode, options.getColor(), ["mord"]);
+        } else {
+            return buildCommon.mathit(
+                group.value, group.mode, options.getColor(), ["mord"]);
+        }
     },
 
     textord: function(group, options, prev) {
-        return buildCommon.mathrm(
-            group.value, group.mode, options.getColor(), ["mord"]);
+        if (options.font === "mathit") {
+            return buildCommon.mathit(
+                group.value, group.mode, options.getColor(), ["mord"]);
+        } else {
+            return buildCommon.mathrm(
+                group.value, group.mode, options.getColor(), ["mord"]);
+        }
     },
 
     bin: function(group, options, prev) {
@@ -865,6 +878,11 @@ var groupTypes = {
             group.value.value, options.withStyle(newStyle), prev);
 
         return makeSpan([options.style.reset(), newStyle.cls()], inner);
+    },
+
+    font: function(group, options, prev) {
+        var font = group.value.font;
+        return buildGroup(group.value.body, options.withFont(font), prev);
     },
 
     delimsizing: function(group, options, prev) {

@@ -6,18 +6,19 @@
  */
 
 /**
- * This is the main options class. It contains the style, size, and color of the
- * current parse level. It also contains the style and size of the parent parse
- * level, so size changes can be handled efficiently.
+ * This is the main options class. It contains the style, size, color, and font
+ * of the current parse level. It also contains the style and size of the parent
+ * parse level, so size changes can be handled efficiently.
  *
  * Each of the `.with*` and `.reset` functions passes its current style and size
  * as the parentStyle and parentSize of the new options class, so parent
  * handling is taken care of automatically.
  */
-function Options(style, size, color, parentStyle, parentSize) {
+function Options(style, size, color, parentStyle, parentSize, font) {
     this.style = style;
     this.color = color;
     this.size = size;
+    this.font = font;
 
     if (parentStyle === undefined) {
         parentStyle = style;
@@ -34,21 +35,32 @@ function Options(style, size, color, parentStyle, parentSize) {
  * Create a new options object with the given style.
  */
 Options.prototype.withStyle = function(style) {
-    return new Options(style, this.size, this.color, this.style, this.size);
+    return new Options(
+        style, this.size, this.color, this.style, this.size, this.font);
 };
 
 /**
  * Create a new options object with the given size.
  */
 Options.prototype.withSize = function(size) {
-    return new Options(this.style, size, this.color, this.style, this.size);
+    return new Options(
+        this.style, size, this.color, this.style, this.size, this.font);
 };
 
 /**
  * Create a new options object with the given color.
  */
 Options.prototype.withColor = function(color) {
-    return new Options(this.style, this.size, color, this.style, this.size);
+    return new Options(
+        this.style, this.size, color, this.style, this.size, this.font);
+};
+
+/**
+ * Create a new options objects with the give font.
+ */
+Options.prototype.withFont = function(font) {
+    return new Options(
+        this.style, this.size, this.color, this.style, this.size, font);
 };
 
 /**
@@ -57,7 +69,7 @@ Options.prototype.withColor = function(color) {
  */
 Options.prototype.reset = function() {
     return new Options(
-        this.style, this.size, this.color, this.style, this.size);
+        this.style, this.size, this.color, this.style, this.size, this.font);
 };
 
 /**

@@ -63,6 +63,14 @@ var mathrm = function(value, mode, color, classes) {
 };
 
 /**
+ * Makes a symbol in the blackboard bold math font
+ */
+var mathbb = function(value, mode, color, classes) {
+    return makeSymbol(
+        value, "AMS-Regular", mode, color, classes.concat(["amsrm"]));
+};
+
+/**
  * Calculate the height, depth, and maxFontSize of an element based on its
  * children.
  */
@@ -265,6 +273,7 @@ module.exports = {
     makeSymbol: makeSymbol,
     mathit: mathit,
     mathrm: mathrm,
+    mathbb: mathbb,
     makeSpan: makeSpan,
     makeFragment: makeFragment,
     makeVList: makeVList

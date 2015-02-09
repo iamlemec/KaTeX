@@ -449,6 +449,22 @@ var duplicatedFunctions = [
         }
     },
 
+    {
+        funcs: [
+            "\\mathrm", "\\mathbb", "\\mathit"
+        ],
+        data: {
+            numArgs: 1,
+            handler: function (func, body) {
+                return {
+                    type: "font",
+                    font: func.slice(1),
+                    body: body
+                };
+            }
+        }
+    },
+
     // Accents
     {
         funcs: [
