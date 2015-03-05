@@ -962,6 +962,11 @@ var symbols = {
             group: "mathord",
             replace: "\u2113"
         },
+        "\\plusminus": {
+            font: "main",
+            group: "rel",
+            replace: "\u00b1"
+        },
         "\\gt": {
             font: "main",
             group: "rel",
