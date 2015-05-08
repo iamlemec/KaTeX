@@ -2053,11 +2053,6 @@ var symbols = {
             group: "rel",
             replace: "\u2190"
         },
-        "\\Leftarrow": {
-            font: "main",
-            group: "rel",
-            replace: "\u21d0"
-        },
         "\\le": {
             font: "main",
             group: "rel",
@@ -2082,11 +2077,6 @@ var symbols = {
             font: "main",
             group: "rel",
             replace: "\u2192"
-        },
-        "\\Rightarrow": {
-            font: "main",
-            group: "rel",
-            replace: "\u21d2"
         },
         "\\to": {
             font: "main",
@@ -2504,11 +2494,6 @@ var symbols = {
             group: "accent",
             replace: "\u02d9"
         },
-        "\\ell": {
-            font: "main",
-            group: "mathord",
-            replace: "\u2113"
-        },
         "\\plusminus": {
             font: "main",
             group: "rel",
@@ -2523,16 +2508,6 @@ var symbols = {
             font: "main",
             group: "rel",
             replace: "\u003c"
-        },
-        "\\sim": {
-            font: "main",
-            group: "rel",
-            replace: "\u223c"
-        },
-        "\\equiv": {
-            font: "main",
-            group: "rel",
-            replace: "\u2261"
         },
         "\\align": {
             font: "main",

@@ -34,6 +34,7 @@ var buildExpression = function(expression, options, prev) {
 
 // List of types used by getTypeOfGroup
 var groupToType = {
+    align: "mord",
     mathord: "mord",
     textord: "mord",
     bin: "mbin",
@@ -159,6 +160,10 @@ var isCharacterBox = function(group) {
  * Simpler types come at the beginning, while complicated types come afterwards.
  */
 var groupTypes = {
+    align: function(group, options, prev) {
+        return makeSpan(["align", "mord"]);
+    },
+
     mathord: function(group, options, prev) {
         return buildCommon.mathit(
             group.value, group.mode, options.getColor(), ["mord"]);
@@ -1147,6 +1152,7 @@ var buildGroup = function(group, options, prev) {
 
         return groupNode;
     } else {
+        console.log(group);
         throw new ParseError(
             "Got group of unknown type: '" + group.type + "'");
     }

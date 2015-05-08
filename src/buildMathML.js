@@ -28,6 +28,11 @@ var makeText = function(text, mode) {
  * tree. Each function should take a parse group and return a MathML node.
  */
 var groupTypes = {
+    align: function(group, options, prev) {
+        var node = new mathMLTree.MathNode("align");
+
+        return node;
+    },
     mathord: function(group) {
         var node = new mathMLTree.MathNode(
             "mi",
