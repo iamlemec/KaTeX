@@ -44,7 +44,7 @@ file to get it to work.
 
 If your function isn't similar to an existing function, you'll need to add a
 line to `functions.js` as well as adding an output function in
-[buildTree.js](src/buildTree.js).
+[buildHTML.js](src/buildHTML.js) and [buildMathML.js](src/buildMathML.js).
 
 ## Testing
 
@@ -68,14 +68,13 @@ tests when you submit a pull request, in case you forget.
 
 If you make any changes to Parser.js, add Jasmine tests to ensure they work.
 
-#### Huxley tests
+#### Screenshot tests
 
-To ensure the final output looks good, we use
-[Huxley](https://github.com/chenglou/node-huxley) tests, which screenshot
-different expressions. These tests can be run by using the [Huxley
-docker](https://github.com/Khan/KaTeX/tree/master/dockers/HuxleyTests).
+To ensure the final output looks good, we screenshot different expressions.
+These tests can be run by using the
+[Screenshotter docker](https://github.com/Khan/KaTeX/tree/master/dockers/Screenshotter).
 
-The Huxley tests should be run if you add anything more significant than
+The screenshot tests should be run if you add anything more significant than
 individual symbols. These tests are not automatically run, so please remember!
 If the new images are different (meaning they are not byte-by-byte the same as
 the old ones), inspect them visually. If there are no visible changes, that is
@@ -83,8 +82,8 @@ okay. If things change in a way consistent with your additions, explain what
 changed and why. Otherwise, figure out what is causing the changes and fix it!
 
 If you add a feature that is dependent on the final output looking the way you
-created it, add a huxley test. See
-[Huxleyfile.json](test/huxley/Huxleyfile.json).
+created it, add a screenshot test. See
+[ss_data.json](test/screenshotter/ss_data.json).
 
 #### Testing in other browsers
 
@@ -100,6 +99,7 @@ Code
  - 4 spaces for indentation
  - 80 character line length
  - commas last
+ - declare variables in the outermost scope that they are used
 
 In general, try to make your code blend in with the surrounding code.
 

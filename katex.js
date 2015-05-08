@@ -7,6 +7,7 @@
  */
 
 var ParseError = require("./src/ParseError");
+var Settings = require("./src/Settings");
 
 var buildTree = require("./src/buildTree");
 var parseTree = require("./src/parseTree");
@@ -16,11 +17,13 @@ var utils = require("./src/utils");
  * Parse and build an expression, and place that expression in the DOM node
  * given.
  */
-var render = function(toParse, baseNode) {
+var render = function(expression, baseNode, options) {
     utils.clearNode(baseNode);
 
-    var tree = parseTree(toParse);
-    var node = buildTree(tree).toNode();
+    var settings = new Settings(options);
+
+    var tree = parseTree(expression, settings);
+    var node = buildTree(tree, expression, settings).toNode();
 
     baseNode.appendChild(node);
 };
@@ -42,13 +45,29 @@ if (typeof document !== "undefined") {
 /**
  * Parse and build an expression, and return the markup for that.
  */
-var renderToString = function(toParse) {
-    var tree = parseTree(toParse);
-    return buildTree(tree).toMarkup();
+var renderToString = function(expression, options) {
+    var settings = new Settings(options);
+
+    var tree = parseTree(expression, settings);
+    return buildTree(tree, expression, settings).toMarkup();
+};
+
+/**
+ * Parse an expression and return the parse tree.
+ */
+var generateParseTree = function(expression, options) {
+    var settings = new Settings(options);
+    return parseTree(expression, settings);
 };
 
 module.exports = {
     render: render,
     renderToString: renderToString,
+    /**
+     * NOTE: This method is not currently recommended for public use.
+     * The internal tree representation is unstable and is very likely
+     * to change. Use at your own risk.
+     */
+    __parse: generateParseTree,
     ParseError: ParseError
 };

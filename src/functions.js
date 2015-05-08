@@ -60,10 +60,10 @@ var ParseError = require("./ParseError");
  *                           error messages
  *             The function should return an object with the following keys:
  *              - type: The type of element that this is. This is then used in
- *                      buildTree to determine which function should be called
- *                      to build this node into a DOM node
+ *                      buildHTML/buildMathML to determine which function
+ *                      should be called to build this node into a DOM node
  *             Any other data can be added to the object, which will be passed
- *             in to the function in buildTree as `group.value`.
+ *             in to the function in buildHTML/buildMathML as `group.value`.
  */
 
 var functions = {
@@ -71,16 +71,11 @@ var functions = {
     "\\sqrt": {
         numArgs: 1,
         numOptionalArgs: 1,
-        handler: function(func, optional, body, positions) {
-            if (optional != null) {
-                throw new ParseError(
-                    "Optional arguments to \\sqrt aren't supported yet",
-                    this.lexer, positions[1] - 1);
-            }
-
+        handler: function(func, index, body, positions) {
             return {
                 type: "sqrt",
-                body: body
+                body: body,
+                index: index
             };
         }
     },
@@ -91,8 +86,8 @@ var functions = {
         argTypes: ["text"],
         greediness: 2,
         handler: function(func, body) {
-            // Since the corresponding buildTree function expects a list of
-            // elements, we normalize for different kinds of arguments
+            // Since the corresponding buildHTML/buildMathML function expects a
+            // list of elements, we normalize for different kinds of arguments
             // TODO(emily): maybe this should be done somewhere else
             var inner;
             if (body.type === "ordgroup") {
@@ -112,6 +107,7 @@ var functions = {
     "\\color": {
         numArgs: 2,
         allowedInText: true,
+        greediness: 3,
         argTypes: ["color", "original"],
         handler: function(func, color, body) {
             // Normalize the different kinds of bodies (see \text above)
@@ -162,6 +158,23 @@ var functions = {
         handler: function(func) {
             return {
                 type: "katex"
+            };
+        }
+    },
+
+    "\\phantom": {
+        numArgs: 1,
+        handler: function(func, body) {
+            var inner;
+            if (body.type === "ordgroup") {
+                inner = body.value;
+            } else {
+                inner = [body];
+            }
+
+            return {
+                type: "phantom",
+                value: inner
             };
         }
     }
@@ -218,6 +231,7 @@ var duplicatedFunctions = [
         data: {
             numArgs: 1,
             allowedInText: true,
+            greediness: 3,
             handler: function(func, body) {
                 var atoms;
                 if (body.type === "ordgroup") {
@@ -407,8 +421,8 @@ var duplicatedFunctions = [
                         this.lexer, positions[1]);
                 }
 
-                // left and right are caught somewhere in Parser.js, which is
-                // why this data doesn't match what is in buildTree
+                // \left and \right are caught somewhere in Parser.js, which is
+                // why this data doesn't match what is in buildHTML.
                 if (func === "\\left" || func === "\\right") {
                     return {
                         type: "leftright",
@@ -522,16 +536,6 @@ for (var i = 0; i < duplicatedFunctions.length; i++) {
     addFuncsWithData(duplicatedFunctions[i].funcs, duplicatedFunctions[i].data);
 }
 
-// Returns the greediness of a given function. Since greediness is optional, we
-// use this function to put in the default value if it is undefined.
-var getGreediness = function(func) {
-    if (functions[func].greediness === undefined) {
-        return 1;
-    } else {
-        return functions[func].greediness;
-    }
-};
-
 // Set default values of functions
 for (var f in functions) {
     if (functions.hasOwnProperty(f)) {
@@ -550,6 +554,5 @@ for (var f in functions) {
 }
 
 module.exports = {
-    funcs: functions,
-    getGreediness: getGreediness
+    funcs: functions
 };

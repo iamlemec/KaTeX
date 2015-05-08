@@ -17,6 +17,1553 @@
 
 var symbols = {
     "math": {
+        // Relation Symbols
+        "\\equiv": {
+            font: "main",
+            group: "rel",
+            replace: "\u2261"
+        },
+        "\\prec": {
+            font: "main",
+            group: "rel",
+            replace: "\u227a"
+        },
+        "\\succ": {
+            font: "main",
+            group: "rel",
+            replace: "\u227b"
+        },
+        "\\sim": {
+            font: "main",
+            group: "rel",
+            replace: "\u223c"
+        },
+        "\\perp": {
+            font: "main",
+            group: "rel",
+            replace: "\u22a5"
+        },
+        "\\preceq": {
+            font: "main",
+            group: "rel",
+            replace: "\u2aaf"
+        },
+        "\\succeq": {
+            font: "main",
+            group: "rel",
+            replace: "\u2ab0"
+        },
+        "\\simeq": {
+            font: "main",
+            group: "rel",
+            replace: "\u2243"
+        },
+        "\\mid": {
+            font: "main",
+            group: "rel",
+            replace: "\u2223"
+        },
+        "\\ll": {
+            font: "main",
+            group: "rel",
+            replace: "\u226a"
+        },
+        "\\gg": {
+            font: "main",
+            group: "rel",
+            replace: "\u226b"
+        },
+        "\\asymp": {
+            font: "main",
+            group: "rel",
+            replace: "\u224d"
+        },
+        "\\parallel": {
+            font: "main",
+            group: "rel",
+            replace: "\u2225"
+        },
+        "\\bowtie": {
+            font: "main",
+            group: "rel",
+            replace: "\u22c8"
+        },
+        "\\smile": {
+            font: "main",
+            group: "rel",
+            replace: "\u2323"
+        },
+        "\\sqsubseteq": {
+            font: "main",
+            group: "rel",
+            replace: "\u2291"
+        },
+        "\\sqsupseteq": {
+            font: "main",
+            group: "rel",
+            replace: "\u2292"
+        },
+        "\\doteq": {
+            font: "main",
+            group: "rel",
+            replace: "\u2250"
+        },
+        "\\frown": {
+            font: "main",
+            group: "rel",
+            replace: "\u2322"
+        },
+        "\\ni": {
+            font: "main",
+            group: "rel",
+            replace: "\u220b"
+        },
+        "\\propto": {
+            font: "main",
+            group: "rel",
+            replace: "\u221d"
+        },
+        "\\vdash": {
+            font: "main",
+            group: "rel",
+            replace: "\u22a2"
+        },
+        "\\dashv": {
+            font: "main",
+            group: "rel",
+            replace: "\u22a3"
+        },
+        "\\owns": {
+            font: "main",
+            group: "rel",
+            replace: "\u220b"
+        },
+
+        // Punctuation
+        "\\ldotp": {
+            font: "main",
+            group: "punct",
+            replace: "\u002e"
+        },
+        "\\cdotp": {
+            font: "main",
+            group: "punct",
+            replace: "\u22c5"
+        },
+
+        // Misc Symbols
+        "\\#": {
+          font: "main",
+          group: "textord",
+          replace: "\u0023"
+        },
+        "\\&": {
+          font: "main",
+          group: "textord",
+          replace: "\u0026"
+        },
+        "\\aleph": {
+            font: "main",
+            group: "textord",
+            replace: "\u2135"
+        },
+        "\\forall": {
+            font: "main",
+            group: "textord",
+            replace: "\u2200"
+        },
+        "\\hbar": {
+            font: "main",
+            group: "textord",
+            replace: "\u210f"
+        },
+        "\\exists": {
+            font: "main",
+            group: "textord",
+            replace: "\u2203"
+        },
+        "\\nabla": {
+            font: "main",
+            group: "textord",
+            replace: "\u2207"
+        },
+        "\\flat": {
+            font: "main",
+            group: "textord",
+            replace: "\u266d"
+        },
+        "\\ell": {
+            font: "main",
+            group: "textord",
+            replace: "\u2113"
+        },
+        "\\natural": {
+            font: "main",
+            group: "textord",
+            replace: "\u266e"
+        },
+        "\\clubsuit": {
+            font: "main",
+            group: "textord",
+            replace: "\u2663"
+        },
+        "\\wp": {
+            font: "main",
+            group: "textord",
+            replace: "\u2118"
+        },
+        "\\sharp": {
+            font: "main",
+            group: "textord",
+            replace: "\u266f"
+        },
+        "\\diamondsuit": {
+            font: "main",
+            group: "textord",
+            replace: "\u2662"
+        },
+        "\\Re": {
+            font: "main",
+            group: "textord",
+            replace: "\u211c"
+        },
+        "\\heartsuit": {
+            font: "main",
+            group: "textord",
+            replace: "\u2661"
+        },
+        "\\Im": {
+            font: "main",
+            group: "textord",
+            replace: "\u2111"
+        },
+        "\\spadesuit": {
+            font: "main",
+            group: "textord",
+            replace: "\u2660"
+        },
+
+        // Math and Text
+        "\\dag": {
+            font: "main",
+            group: "textord",
+            replace: "\u2020"
+        },
+        "\\ddag": {
+            font: "main",
+            group: "textord",
+            replace: "\u2021"
+        },
+
+        // Large Delimiters
+        "\\rmoustache": {
+            font: "main",
+            group: "close",
+            replace: "\u23b1"
+        },
+        "\\lmoustache": {
+            font: "main",
+            group: "open",
+            replace: "\u23b0"
+        },
+        "\\rgroup": {
+            font: "main",
+            group: "close",
+            replace: "\u27ef"
+        },
+        "\\lgroup": {
+            font: "main",
+            group: "open",
+            replace: "\u27ee"
+        },
+
+        // Binary Operators
+        "\\mp": {
+            font: "main",
+            group: "bin",
+            replace: "\u2213"
+        },
+        "\\ominus": {
+            font: "main",
+            group: "bin",
+            replace: "\u2296"
+        },
+        "\\uplus": {
+            font: "main",
+            group: "bin",
+            replace: "\u228e"
+        },
+        "\\sqcap": {
+            font: "main",
+            group: "bin",
+            replace: "\u2293"
+        },
+        "\\ast": {
+            font: "main",
+            group: "bin",
+            replace: "\u2217"
+        },
+        "\\sqcup": {
+            font: "main",
+            group: "bin",
+            replace: "\u2294"
+        },
+        "\\bigcirc": {
+            font: "main",
+            group: "bin",
+            replace: "\u25ef"
+        },
+        "\\bullet": {
+            font: "main",
+            group: "bin",
+            replace: "\u2219"
+        },
+        "\\ddagger": {
+            font: "main",
+            group: "bin",
+            replace: "\u2021"
+        },
+        "\\wr": {
+            font: "main",
+            group: "bin",
+            replace: "\u2240"
+        },
+        "\\amalg": {
+            font: "main",
+            group: "bin",
+            replace: "\u2a3f"
+        },
+
+        // Arrow Symbols
+        "\\longleftarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u27f5"
+        },
+        "\\Leftarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u21d0"
+        },
+        "\\Longleftarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u27f8"
+        },
+        "\\longrightarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u27f6"
+        },
+        "\\Rightarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u21d2"
+        },
+        "\\Longrightarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u27f9"
+        },
+        "\\leftrightarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u2194"
+        },
+        "\\longleftrightarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u27f7"
+        },
+        "\\Leftrightarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u21d4"
+        },
+        "\\Longleftrightarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u27fa"
+        },
+        "\\mapsto": {
+            font: "main",
+            group: "rel",
+            replace: "\u21a6"
+        },
+        "\\longmapsto": {
+            font: "main",
+            group: "rel",
+            replace: "\u27fc"
+        },
+        "\\nearrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u2197"
+        },
+        "\\hookleftarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u21a9"
+        },
+        "\\hookrightarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u21aa"
+        },
+        "\\searrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u2198"
+        },
+        "\\leftharpoonup": {
+            font: "main",
+            group: "rel",
+            replace: "\u21bc"
+        },
+        "\\rightharpoonup": {
+            font: "main",
+            group: "rel",
+            replace: "\u21c0"
+        },
+        "\\swarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u2199"
+        },
+        "\\leftharpoondown": {
+            font: "main",
+            group: "rel",
+            replace: "\u21bd"
+        },
+        "\\rightharpoondown": {
+            font: "main",
+            group: "rel",
+            replace: "\u21c1"
+        },
+        "\\nwarrow": {
+            font: "main",
+            group: "rel",
+            replace: "\u2196"
+        },
+        "\\rightleftharpoons": {
+            font: "main",
+            group: "rel",
+            replace: "\u21cc"
+        },
+
+        // AMS Negated Binary Relations
+        "\\nless": {
+            font: "ams",
+            group: "rel",
+            replace: "\u226e"
+        },
+        "\\nleqslant": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue010"
+        },
+        "\\nleqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue011"
+        },
+        "\\lneq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a87"
+        },
+        "\\lneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2268"
+        },
+        "\\lvertneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue00c"
+        },
+        "\\lnsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22e6"
+        },
+        "\\lnapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a89"
+        },
+        "\\nprec": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2280"
+        },
+        "\\npreceq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22e0"
+        },
+        "\\precnsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22e8"
+        },
+        "\\precnapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2ab9"
+        },
+        "\\nsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2241"
+        },
+        "\\nshortmid": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue006"
+        },
+        "\\nmid": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2224"
+        },
+        "\\nvdash": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22ac"
+        },
+        "\\nvDash": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22ad"
+        },
+        "\\ntriangleleft": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22ea"
+        },
+        "\\ntrianglelefteq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22ec"
+        },
+        "\\subsetneq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u228a"
+        },
+        "\\varsubsetneq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue01a"
+        },
+        "\\subsetneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2acb"
+        },
+        "\\varsubsetneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue017"
+        },
+        "\\ngtr": {
+            font: "ams",
+            group: "rel",
+            replace: "\u226f"
+        },
+        "\\ngeqslant": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue00f"
+        },
+        "\\ngeqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue00e"
+        },
+        "\\gneq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a88"
+        },
+        "\\gneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2269"
+        },
+        "\\gvertneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue00d"
+        },
+        "\\gnsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22e7"
+        },
+        "\\gnapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a8a"
+        },
+        "\\nsucc": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2281"
+        },
+        "\\nsucceq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22e1"
+        },
+        "\\succnsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22e9"
+        },
+        "\\succnapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2aba"
+        },
+        "\\ncong": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2246"
+        },
+        "\\nshortparallel": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue007"
+        },
+        "\\nparallel": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2226"
+        },
+        "\\nVDash": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22af"
+        },
+        "\\ntriangleright": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22eb"
+        },
+        "\\ntrianglerighteq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22ed"
+        },
+        "\\nsupseteqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue018"
+        },
+        "\\supsetneq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u228b"
+        },
+        "\\varsupsetneq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue01b"
+        },
+        "\\supsetneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2acc"
+        },
+        "\\varsupsetneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue019"
+        },
+        "\\nVdash": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22ae"
+        },
+        "\\precneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2ab5"
+        },
+        "\\succneqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2ab6"
+        },
+        "\\nsubseteqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\ue016"
+        },
+        "\\unlhd": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22b4"
+        },
+        "\\unrhd": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22b5"
+        },
+
+        // AMS Negated Arrows
+         "\\nleftarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u219a"
+        },
+        "\\nrightarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u219b"
+        },
+        "\\nLeftarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21cd"
+        },
+        "\\nRightarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21cf"
+        },
+        "\\nleftrightarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21ae"
+        },
+        "\\nLeftrightarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21ce"
+        },
+
+        // AMS Misc
+        "\\vartriangle": {
+            font: "ams",
+            group: "rel",
+            replace: "\u25b3"
+        },
+        "\\hslash": {
+            font: "ams",
+            group: "textord",
+            replace: "\u210f"
+        },
+        "\\triangledown": {
+            font: "ams",
+            group: "textord",
+            replace: "\u25bd"
+        },
+        "\\lozenge": {
+            font: "ams",
+            group: "textord",
+            replace: "\u25ca"
+        },
+        "\\circledS": {
+            font: "ams",
+            group: "textord",
+            replace: "\u24c8"
+        },
+        "\\measuredangle": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2221"
+        },
+        "\\nexists": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2204"
+        },
+        "\\mho": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2127"
+        },
+        "\\Finv": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2132"
+        },
+        "\\Game": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2141"
+        },
+        "\\Bbbk": {
+            font: "ams",
+            group: "textord",
+            replace: "\u006b"
+        },
+        "\\backprime": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2035"
+        },
+        "\\blacktriangle": {
+            font: "ams",
+            group: "textord",
+            replace: "\u25b2"
+        },
+        "\\blacktriangledown": {
+            font: "ams",
+            group: "textord",
+            replace: "\u25bc"
+        },
+        "\\blacksquare": {
+            font: "ams",
+            group: "textord",
+            replace: "\u25a0"
+        },
+        "\\blacklozenge": {
+            font: "ams",
+            group: "textord",
+            replace: "\u29eb"
+        },
+        "\\bigstar": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2605"
+        },
+        "\\sphericalangle": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2222"
+        },
+        "\\complement": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2201"
+        },
+        "\\eth": {
+            font: "ams",
+            group: "textord",
+            replace: "\u00f0"
+        },
+        "\\diagup": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2571"
+        },
+        "\\diagdown": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2572"
+        },
+        "\\square": {
+            font: "ams",
+            group: "textord",
+            replace: "\u25a1"
+        },
+        "\\Box": {
+            font: "ams",
+            group: "textord",
+            replace: "\u25a1"
+        },
+        "\\Diamond": {
+            font: "ams",
+            group: "textord",
+            replace: "\u25ca"
+        },
+        "\\yen": {
+            font: "ams",
+            group: "textord",
+            replace: "\u00a5"
+        },
+
+        // AMS Hebrew
+        "\\beth": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2136"
+        },
+        "\\daleth": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2138"
+        },
+        "\\gimel": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2137"
+        },
+
+        // AMS Greek
+        "\\digamma": {
+            font: "ams",
+            group: "textord",
+            replace: "\u03dd"
+        },
+        "\\varkappa": {
+            font: "ams",
+            group: "textord",
+            replace: "\u03f0"
+        },
+
+        // AMS Delimiters
+        "\\ulcorner": {
+            font: "ams",
+            group: "textord",
+            replace: "\u250c"
+        },
+        "\\urcorner": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2510"
+        },
+        "\\llcorner": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2514"
+        },
+        "\\lrcorner": {
+            font: "ams",
+            group: "textord",
+            replace: "\u2518"
+        },
+
+        // AMS Binary Relations
+        "\\leqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2266"
+        },
+        "\\leqslant": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a7d"
+        },
+        "\\eqslantless": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a95"
+        },
+        "\\lesssim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2272"
+        },
+        "\\lessapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a85"
+        },
+        "\\approxeq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u224a"
+        },
+        "\\lessdot": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22d6"
+        },
+        "\\lll": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22d8"
+        },
+        "\\lessgtr": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2276"
+        },
+        "\\lesseqgtr": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22da"
+        },
+        "\\lesseqqgtr": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a8b"
+        },
+        "\\doteqdot": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2251"
+        },
+        "\\risingdotseq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2253"
+        },
+        "\\fallingdotseq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2252"
+        },
+        "\\backsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u223d"
+        },
+        "\\backsimeq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22cd"
+        },
+        "\\subseteqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2ac5"
+        },
+        "\\Subset": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22d0"
+        },
+        "\\sqsubset": {
+            font: "ams",
+            group: "rel",
+            replace: "\u228f"
+        },
+        "\\preccurlyeq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u227c"
+        },
+        "\\curlyeqprec": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22de"
+        },
+        "\\precsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u227e"
+        },
+        "\\precapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2ab7"
+        },
+        "\\vartriangleleft": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22b2"
+        },
+        "\\trianglelefteq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22b4"
+        },
+        "\\vDash": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22a8"
+        },
+        "\\Vvdash": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22aa"
+        },
+        "\\smallsmile": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2323"
+        },
+        "\\smallfrown": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2322"
+        },
+        "\\bumpeq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u224f"
+        },
+        "\\Bumpeq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u224e"
+        },
+        "\\geqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2267"
+        },
+        "\\geqslant": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a7e"
+        },
+        "\\eqslantgtr": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a96"
+        },
+        "\\gtrsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2273"
+        },
+        "\\gtrapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a86"
+        },
+        "\\gtrdot": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22d7"
+        },
+        "\\ggg": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22d9"
+        },
+        "\\gtrless": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2277"
+        },
+        "\\gtreqless": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22db"
+        },
+        "\\gtreqqless": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2a8c"
+        },
+        "\\eqcirc": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2256"
+        },
+        "\\circeq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2257"
+        },
+        "\\triangleq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u225c"
+        },
+        "\\thicksim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u223c"
+        },
+        "\\thickapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2248"
+        },
+        "\\supseteqq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2ac6"
+        },
+        "\\Supset": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22d1"
+        },
+        "\\sqsupset": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2290"
+        },
+        "\\succcurlyeq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u227d"
+        },
+        "\\curlyeqsucc": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22df"
+        },
+        "\\succsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u227f"
+        },
+        "\\succapprox": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2ab8"
+        },
+        "\\vartriangleright": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22b3"
+        },
+        "\\trianglerighteq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22b5"
+        },
+        "\\Vdash": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22a9"
+        },
+        "\\shortmid": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2223"
+        },
+        "\\shortparallel": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2225"
+        },
+        "\\between": {
+            font: "ams",
+            group: "rel",
+            replace: "\u226c"
+        },
+        "\\pitchfork": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22d4"
+        },
+        "\\varpropto": {
+            font: "ams",
+            group: "rel",
+            replace: "\u221d"
+        },
+        "\\blacktriangleleft": {
+            font: "ams",
+            group: "rel",
+            replace: "\u25c0"
+        },
+        "\\therefore": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2234"
+        },
+        "\\backepsilon": {
+            font: "ams",
+            group: "rel",
+            replace: "\u220d"
+        },
+        "\\blacktriangleright": {
+            font: "ams",
+            group: "rel",
+            replace: "\u25b6"
+        },
+        "\\because": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2235"
+        },
+        "\\llless": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22d8"
+        },
+        "\\gggtr": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22d9"
+        },
+        "\\lhd": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22b2"
+        },
+        "\\rhd": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22b3"
+        },
+        "\\eqsim": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2242"
+        },
+        "\\Join": {
+            font: "main",
+            group: "rel",
+            replace: "\u22c8"
+        },
+        "\\Doteq": {
+            font: "ams",
+            group: "rel",
+            replace: "\u2251"
+        },
+
+        // AMS Binary Operators
+        "\\dotplus": {
+            font: "ams",
+            group: "bin",
+            replace: "\u2214"
+        },
+        "\\smallsetminus": {
+            font: "ams",
+            group: "bin",
+            replace: "\u2216"
+        },
+        "\\Cap": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22d2"
+        },
+        "\\Cup": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22d3"
+        },
+        "\\doublebarwedge": {
+            font: "ams",
+            group: "bin",
+            replace: "\u2a5e"
+        },
+        "\\boxminus": {
+            font: "ams",
+            group: "bin",
+            replace: "\u229f"
+        },
+        "\\boxplus": {
+            font: "ams",
+            group: "bin",
+            replace: "\u229e"
+        },
+        "\\divideontimes": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22c7"
+        },
+        "\\ltimes": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22c9"
+        },
+        "\\rtimes": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22ca"
+        },
+        "\\leftthreetimes": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22cb"
+        },
+        "\\rightthreetimes": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22cc"
+        },
+        "\\curlywedge": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22cf"
+        },
+        "\\curlyvee": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22ce"
+        },
+        "\\circleddash": {
+            font: "ams",
+            group: "bin",
+            replace: "\u229d"
+        },
+        "\\circledast": {
+            font: "ams",
+            group: "bin",
+            replace: "\u229b"
+        },
+        "\\centerdot": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22c5"
+        },
+        "\\intercal": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22ba"
+        },
+        "\\doublecap": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22d2"
+        },
+        "\\doublecup": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22d3"
+        },
+        "\\boxtimes": {
+            font: "ams",
+            group: "bin",
+            replace: "\u22a0"
+        },
+
+        // AMS Arrows
+        "\\dashrightarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21e2"
+        },
+        "\\dashleftarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21e0"
+        },
+        "\\leftleftarrows": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21c7"
+        },
+        "\\leftrightarrows": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21c6"
+        },
+        "\\Lleftarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21da"
+        },
+        "\\twoheadleftarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u219e"
+        },
+        "\\leftarrowtail": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21a2"
+        },
+        "\\looparrowleft": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21ab"
+        },
+        "\\leftrightharpoons": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21cb"
+        },
+        "\\curvearrowleft": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21b6"
+        },
+        "\\circlearrowleft": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21ba"
+        },
+        "\\Lsh": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21b0"
+        },
+        "\\upuparrows": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21c8"
+        },
+        "\\upharpoonleft": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21bf"
+        },
+        "\\downharpoonleft": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21c3"
+        },
+        "\\multimap": {
+            font: "ams",
+            group: "rel",
+            replace: "\u22b8"
+        },
+        "\\leftrightsquigarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21ad"
+        },
+        "\\rightrightarrows": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21c9"
+        },
+        "\\rightleftarrows": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21c4"
+        },
+        "\\twoheadrightarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21a0"
+        },
+        "\\rightarrowtail": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21a3"
+        },
+        "\\looparrowright": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21ac"
+        },
+        "\\curvearrowright": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21b7"
+        },
+        "\\circlearrowright": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21bb"
+        },
+        "\\Rsh": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21b1"
+        },
+        "\\downdownarrows": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21ca"
+        },
+        "\\upharpoonright": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21be"
+        },
+        "\\downharpoonright": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21c2"
+        },
+        "\\rightsquigarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21dd"
+        },
+        "\\leadsto": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21dd"
+        },
+        "\\Rrightarrow": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21db"
+        },
+        "\\restriction": {
+            font: "ams",
+            group: "rel",
+            replace: "\u21be"
+        },
+
         "`": {
             font: "main",
             group: "textord",
@@ -624,17 +2171,17 @@ var symbols = {
         },
         "\\odot": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u2299"
         },
         "\\oplus": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u2295"
         },
         "\\otimes": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u2297"
         },
         "\\partial":{
@@ -644,7 +2191,7 @@ var symbols = {
         },
         "\\oslash": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u2298"
         },
         "\\circledcirc": {
@@ -659,37 +2206,37 @@ var symbols = {
         },
         "\\bigtriangleup": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u25b3"
         },
         "\\bigtriangledown": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u25bd"
         },
         "\\dagger": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u2020"
         },
         "\\diamond": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u22c4"
         },
         "\\star": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u22c6"
         },
         "\\triangleleft": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u25c3"
         },
         "\\triangleright": {
             font: "main",
-            group: "textord",
+            group: "bin",
             replace: "\u25b9"
         },
         "\\{": {
